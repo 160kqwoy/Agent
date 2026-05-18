@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  # AI Agent 主服务
+  agent:
+    build: .
+    container_name: ai-agent
+    ports:
+      - "8501:8501"  # Streamlit UI 端口
+      - "8000:8000"  # FastAPI API 端口
+    environment:
+      - LLM_API_KEY=${LLM_API_KEY}
+      - LLM_BASE_URL=${LLM_BASE_URL}
+      - LLM_MODEL=${LLM_MODEL}
+      - OPENWEATHER_API_KEY=${OPENWEATHER_API_KEY}
+      - NEWSAPI_KEY=${NEWSAPI_KEY}
+    volumes:
+      - ./memory.json:/app/memory.json
+      - ./chat_history.json:/app/chat_history.json
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - agent-network
+
+  # 可选：API 服务单独部署
+  api:
+    build: .
+    container_name: ai-agent-api
+    command: ["uvicorn", "api_server:app", "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "8000:8000"
+    environment:
+      - LLM_API_KEY=${LLM_API_KEY}
+      - LLM_BASE_URL=${LLM_BASE_URL}
+      - LLM_MODEL=${LLM_MODEL}
+    volumes:
+      - ./memory.json:/app/memory.json
+      - ./chat_history.json:/app/chat_history.json
+    restart: unless-stopped
+    networks:
+      - agent-network
+
+networks:
+  agent-network:
+    driver: bridge

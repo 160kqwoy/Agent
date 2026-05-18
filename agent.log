@@ -1,0 +1,35 @@
+2026-05-06 14:31:30 - INFO - main:72 - 测试信息日志
+2026-05-06 14:31:30 - ERROR - main:82 - 测试错误日志
+2026-05-06 14:31:30 - INFO - main:87 - 工具调用: calculate(2+3) -> 5
+2026-05-06 14:31:30 - INFO - main:92 - 用户输入: 你好，这是一个测试输入
+2026-05-06 14:31:30 - INFO - main:97 - Agent 响应: 这是一个测试响应
+2026-05-06 14:31:30 - INFO - main:72 - 测试日志文件写入
+2026-05-06 15:02:56 - INFO - main:222 - 已加载 4 个插件: ['calc_plugin', 'file_plugin', 'search_plugin', 'time_plugin']
+2026-05-06 15:02:56 - INFO - main:222 - 已加载 6 个工具
+2026-05-06 15:03:31 - INFO - main:222 - 已加载 4 个插件: ['calc_plugin', 'file_plugin', 'search_plugin', 'time_plugin']
+2026-05-06 15:03:31 - INFO - main:222 - 已加载 6 个工具
+2026-05-06 15:03:57 - INFO - main:222 - 已加载 4 个插件: ['calc_plugin', 'file_plugin', 'search_plugin', 'time_plugin']
+2026-05-06 15:03:57 - INFO - main:222 - 已加载 6 个工具
+2026-05-06 15:03:57 - INFO - main:222 - 已加载 4 个插件: ['calc_plugin', 'file_plugin', 'search_plugin', 'time_plugin']
+2026-05-06 15:03:57 - INFO - main:222 - 已加载 6 个工具
+2026-05-06 15:19:11 - INFO - main:239 - 已加载 4 个插件: ['calc_plugin', 'file_plugin', 'search_plugin', 'time_plugin']
+2026-05-06 15:19:11 - INFO - main:239 - 已加载 6 个工具
+2026-05-06 15:19:11 - INFO - main:239 - 已加载 4 个插件: ['calc_plugin', 'file_plugin', 'search_plugin', 'time_plugin']
+2026-05-06 15:19:11 - INFO - main:239 - 已加载 6 个工具
+2026-05-06 15:22:33 - INFO - main:230 - 已加载 4 个插件: ['calc_plugin', 'file_plugin', 'search_plugin', 'time_plugin']
+2026-05-06 15:22:33 - INFO - main:230 - 已加载 6 个工具
+2026-05-06 15:22:33 - INFO - main:230 - 已加载 4 个插件: ['calc_plugin', 'file_plugin', 'search_plugin', 'time_plugin']
+2026-05-06 15:22:33 - INFO - main:230 - 已加载 6 个工具
+2026-05-06 15:32:30 - INFO - main:230 - 已加载 4 个插件: ['calc_plugin', 'file_plugin', 'search_plugin', 'time_plugin']
+2026-05-06 15:32:30 - INFO - main:230 - 已加载 6 个工具
+2026-05-06 15:32:36 - INFO - main:250 - 用户输入: 介绍下你自己
+2026-05-06 15:40:04 - INFO - main:230 - 已加载 4 个插件: ['calc_plugin', 'file_plugin', 'search_plugin', 'time_plugin']
+2026-05-06 15:40:04 - INFO - main:230 - 已加载 6 个工具
+2026-05-06 15:40:04 - INFO - main:230 - 已加载 4 个插件: ['calc_plugin', 'file_plugin', 'search_plugin', 'time_plugin']
+2026-05-06 15:40:04 - INFO - main:230 - 已加载 6 个工具
+2026-05-06 15:42:59 - INFO - main:230 - 已加载 4 个插件: ['calc_plugin', 'file_plugin', 'search_plugin', 'time_plugin']
+2026-05-06 15:42:59 - INFO - main:230 - 已加载 6 个工具
+2026-05-06 15:43:04 - INFO - main:250 - 用户输入: 介绍你自己
+2026-05-06 15:44:21 - INFO - main:255 - Agent 响应: 你好！我是你的智能助手。我具备多种工具能力，包括数学计算、文件读写操作、网络搜索以及获取当前时间等。...
+2026-05-18 09:27:18 - INFO - main:230 - 已加载 4 个插件: ['calc_plugin', 'file_plugin', 'search_plugin', 'time_plugin']
+2026-05-18 09:27:18 - INFO - main:230 - 已加载 6 个工具

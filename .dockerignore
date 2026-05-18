@@ -1,0 +1,44 @@
+# 虚拟环境
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 日志文件
+*.log
+logs/
+
+# 数据文件（运行时挂载）
+memory.json
+chat_history.json
+
+# 配置文件
+.env
+.env.local
+.env.*
+
+# IDE 文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Docker 文件
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# 测试文件
+test_*.py
+
+# 改进文档
+IMPROVEMENT_*.md
+
+# Git
+.git/
+.gitignore
+
+# Streamlit 配置
+.streamlit/
