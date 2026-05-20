@@ -1,0 +1,126 @@
+```mermaid
+graph TB
+    subgraph 用户层
+        A[图形化界面\nStreamlit]
+        B[命令行界面]
+        C[API接口\nFastAPI]
+    end
+    
+    subgraph 核心模块
+        D[意图识别模块]
+        E[实体提取模块]
+        F[上下文管理器]
+        G[工具推荐器]
+        H[ReAct推理引擎]
+    end
+    
+    subgraph 工具层
+        I[计算器工具]
+        J[时间查询]
+        K[文件操作]
+        L[天气预报]
+        M[新闻资讯]
+        N[图片生成]
+        O[文本处理]
+        P[数据处理]
+    end
+    
+    subgraph 记忆系统
+        Q[短期对话记忆]
+        R[长期记忆存储\nJSON持久化]
+    end
+    
+    subgraph 基础设施
+        S[本地LLM\nQwen3.5]
+        T[缓存系统\nLRU]
+        U[限流机制\n滑动窗口]
+        V[性能监控]
+    end
+    
+    A --> D
+    B --> D
+    C --> D
+    
+    D --> E
+    D --> F
+    E --> F
+    
+    F --> G
+    G --> H
+    
+    H --> I
+    H --> J
+    H --> K
+    H --> L
+    H --> M
+    H --> N
+    H --> O
+    H --> P
+    
+    H --> Q
+    Q --> R
+    
+    H --> S
+    S --> H
+    
+    T --> H
+    U --> H
+    V --> H
+    
+    style A fill:#E8F4FD,stroke:#3B82F6
+    style B fill:#E8F4FD,stroke:#3B82F6
+    style C fill:#E8F4FD,stroke:#3B82F6
+    style D fill:#FEF3C7,stroke:#F59E0B
+    style E fill:#FEF3C7,stroke:#F59E0B
+    style F fill:#FEF3C7,stroke:#F59E0B
+    style G fill:#FEF3C7,stroke:#F59E0B
+    style H fill:#FEF3C7,stroke:#F59E0B
+    style I fill:#D1FAE5,stroke:#10B981
+    style J fill:#D1FAE5,stroke:#10B981
+    style K fill:#D1FAE5,stroke:#10B981
+    style L fill:#D1FAE5,stroke:#10B981
+    style M fill:#D1FAE5,stroke:#10B981
+    style N fill:#D1FAE5,stroke:#10B981
+    style O fill:#D1FAE5,stroke:#10B981
+    style P fill:#D1FAE5,stroke:#10B981
+    style Q fill:#FCE7F3,stroke:#EC4899
+    style R fill:#FCE7F3,stroke:#EC4899
+    style S fill:#E0E7FF,stroke:#6366F1
+    style T fill:#E0E7FF,stroke:#6366F1
+    style U fill:#E0E7FF,stroke:#6366F1
+    style V fill:#E0E7FF,stroke:#6366F1
+```
+
+## Memoria系统架构说明
+
+### 一、用户层
+- **图形化界面**：基于Streamlit构建，支持聊天窗口、控制面板、工具列表、性能监控等功能
+- **命令行界面**：支持终端交互模式
+- **API接口**：基于FastAPI提供RESTful服务
+
+### 二、核心模块
+- **意图识别模块**：识别用户9种意图类型（天气查询、新闻查询、计算、时间查询等）
+- **实体提取模块**：提取地点、日期、数字、话题等实体信息
+- **上下文管理器**：多会话上下文管理、指代解析、话题跟踪
+- **工具推荐器**：关键词匹配+置信度评估，工具优先级排序
+- **ReAct推理引擎**：实现思考-行动-观察的推理循环
+
+### 三、工具层
+- **计算器工具**：执行数学运算（加减乘除、三角函数、对数等）
+- **时间查询**：获取当前时间和日期
+- **文件操作**：读取、写入、删除本地文件
+- **天气预报**：获取实时天气和未来预报
+- **新闻资讯**：获取最新头条新闻
+- **图片生成**：使用DALL-E生成图片
+- **文本处理**：文本摘要、关键词提取、格式转换、拼音转换
+- **数据处理**：单位换算、日期计算、进制转换
+
+### 四、记忆系统
+- **短期对话记忆**：维持当前对话上下文
+- **长期记忆存储**：JSON文件持久化存储，支持关键词搜索和相似度匹配
+
+### 五、基础设施
+- **本地LLM**：支持连接本地运行的大语言模型（如Qwen3.5）
+- **缓存系统**：LRU缓存管理器，支持TTL过期
+- **限流机制**：滑动窗口算法，控制请求频率
+- **性能监控**：API调用统计和响应时间监控
